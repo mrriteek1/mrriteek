@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dashboard | MRRAPANNEL</title>
+  <link rel="stylesheet" href="style.css">
+  <script>
+    function loadDetails() {
+      const wallet = localStorage.getItem("wallet") || "₹0";
+      const prime = localStorage.getItem("prime") || "0";
+      document.getElementById("wallet").innerText = wallet;
+      document.getElementById("prime").innerText = prime + " days left";
+    }
+  </script>
+</head>
+<body onload="loadDetails()">
+<nav>
+  <a href="index.html">🏠 Login</a>
+  <a href="dashboard.html">📋 Dashboard</a>
+  <a href="refer.html">💸 Refer</a>
+  <a href="help.html">❓ Help</a>
+  <a href="admin.html">🔐 Admin</a>
+</nav>
+
+<div class="box">
+  <h2>👋 Welcome User!</h2>
+  <p>💰 Wallet Balance: <span id="wallet"></span></p>
+  <p>👑 Prime Status: <span id="prime"></span></p>
+</div>
+</body>
+</html>
